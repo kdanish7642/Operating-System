@@ -1,0 +1,21 @@
+Shell Program to Find Whether a Number is a Palindrome or Not
+#!/bin/bash
+
+echo "Enter a number:"
+read num
+
+original_num=$num
+reverse=0
+
+while (( num > 0 ))
+do
+    digit=$(( num % 10 ))
+    reverse=$(( reverse * 10 + digit ))
+    num=$(( num / 10 ))
+done
+
+if (( original_num == reverse )); then
+    echo "$original_num is a palindrome."
+else
+    echo "$original_num is not a palindrome."
+fi

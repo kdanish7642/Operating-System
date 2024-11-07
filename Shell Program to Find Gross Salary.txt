@@ -1,0 +1,13 @@
+Shell Program to Find Gross Salary of an Employee
+#!/bin/bash
+
+echo "Enter Basic Salary:"
+read basic
+
+# Assuming standard rates for HRA and DA
+hra=$((basic * 20 / 100))   # 20% of basic
+da=$((basic * 10 / 100))    # 10% of basic
+
+gross_salary=$((basic + hra + da))
+
+echo "Gross Salary is $gross_salary"
